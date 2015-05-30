@@ -1,0 +1,23 @@
+{
+  "playlist" : {
+	"title" : "%{title}",
+	"creator" : "%{artist}",
+	"annotation" : "%{comment}",
+	"info" : "%{website}",
+	"image" : "%{albumart}",
+	"date" : "%{year}",
+	"license" : "%{copyright}",
+	"track" : [
+		{
+		"location" : ["%{file}"],
+		"title" : "%{title}",
+		"creator" : "%{artist}",
+		"info" : "%{website}",
+		"image" : "%{albumart}",
+		"album" : "%{album}",
+		"trackNum" : "%{track}",
+		"duration" : "%{seconds}"
+		}
+		]    
+  }
+}  
