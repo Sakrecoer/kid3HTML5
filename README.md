@@ -6,5 +6,4 @@ The Render folder contains a view of how an export would be rendered by kid3, as
 2015/31/5
 I still hesitate. Perhaps its easier to make kid3 spit jekyll posts to provide custom layouts?
 2015/31/5
-At this point the render version works, assuming that kid3 can use the filename as UID and that kid3 can be aware of a context for the next/previous system to work.
-I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
+At this point the render version works, tho it's missing the JSON-LD part. Assuming that kid3 can use the filename as UID and that kid3 can be aware of a context for the next/previous system to work, this could be a cool feature. Maybe create 3 preset styles? I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
