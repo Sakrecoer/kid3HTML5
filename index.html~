@@ -14,6 +14,7 @@ html{
  transition:.5s background;
  font-family: Helvetica, Arial, sans-serif, sans;
  font-size: 1em;
+ background: #777;
 }
 body, p{
  margin:0;
@@ -60,15 +61,19 @@ a:active {
  </head>
  <body>
   <h1>%{artist} - %{album}</h1>
-  <ul>
+
+  <div style="width: 100%;">
 
 <!--  for each track -->
-
-   <li><a href="%{filepath}">%{title} - %{duration}</a></li>
-
+  <div style="float: left; width:350px;height:350px;background:#111;">%{track} %{title} - %{duration}</div>
 <!--  end for each track -->
+  <div style="float: left; width:350px;height:350px;background:url(01-title-artist-album.jpg)">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#444;">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#999;">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div>
+   <br style="clear: left;" />
+  </div>
 
-  </ul>
  </body>
 </html>
 

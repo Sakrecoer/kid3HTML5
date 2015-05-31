@@ -65,12 +65,12 @@ a:active {
   <div style="width: 100%;">
 
 <!--  for each track -->
-  <div style="float: left; width:350px;height:350px;background:#111;">%{track} %{title} - %{duration}</div>
+ <a href=""><div style="float: left; width:350px;height:350px;background:url(01-title-artist-album.jpg);background-size:cover;"><h1>%{track} <p><strong>%{title}</strong> - %{duration}</p></div></a>
 <!--  end for each track -->
-  <div style="float: left; width:350px;height:350px;background:#333;">%{track} %{title} - %{duration}</div>
-  <div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div>
-  <div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div>
-  <div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div>
+  <a href=""><div style="float: left; width:350px;height:350px;background:url(02-title-artist-album.jpg);background-size:cover;">%{track} %{title} - %{duration}</div></a>
+  <a href=""><div style="float: left; width:350px;height:350px;background:url(03-title-artist-album.jpg);background-size:cover;">%{track} %{title} - %{duration}</div></a>
+  <a href=""><div style="float: left; width:350px;height:350px;background:#f0f;">%{track} %{title} - %{duration}</div></a>
+  <a href=""><div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div></a>
    <br style="clear: left;" />
   </div>
 
