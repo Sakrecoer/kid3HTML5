@@ -43,7 +43,7 @@ a:focus {
 a,
 a:link,
 a:visited {
- color: #fff;
+  color: #fff;
  -webkit-transition-property: hover;
  -webkit-transition: color 0.15s ease-in-out;
  -moz-transition: color 0.15s linear 0s; /* firefox 4 */
@@ -56,21 +56,65 @@ a:hover {
 a:active {
  color: #f00;
 }
+.vignette {
+padding:17px;
+float: left; 
+width:350px;
+height:350px;
+background-size:cover;
+}
+#picker p {
+ position:relative;
+ height: 300px; padding: 7px;
+ border-radius: 7px;
+ background: rgba(119,119,119,0);
+ color:transparent;
+}
+#picker p:hover{
+ background: rgba(0,0,0,.9);
+ color: #777;
+}
+strong {
+font-size:2em;
+}
   </style>
 
  </head>
  <body>
   <h1>%{artist} - %{album}</h1>
 
-  <div style="width: 100%;">
+  <div style="width: 100%;" id="picker">
 
 <!--  for each track -->
- <a href=""><div style="float: left; width:350px;height:350px;background:url(01-title-artist-album.jpg);background-size:cover;"><h1>%{track} <p><strong>%{title}</strong> - %{duration}</p></div></a>
+ <a href=""><div class="vignette" style="background:url(01-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
 <!--  end for each track -->
-  <a href=""><div style="float: left; width:350px;height:350px;background:url(02-title-artist-album.jpg);background-size:cover;">%{track} %{title} - %{duration}</div></a>
-  <a href=""><div style="float: left; width:350px;height:350px;background:url(03-title-artist-album.jpg);background-size:cover;">%{track} %{title} - %{duration}</div></a>
-  <a href=""><div style="float: left; width:350px;height:350px;background:#f0f;">%{track} %{title} - %{duration}</div></a>
-  <a href=""><div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div></a>
+<!--  for each track -->
+ <a href=""><div class="vignette" style="background:url(02-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
+<!--  for each track -->
+ <a href=""><div class="vignette" style="background:url(03-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
+<!--  for each track -->
+ <a href=""><div class="vignette" style="background:url(03-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
+<!--  for each track -->
+ <a href=""><div class="vignette" style="background:url(03-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
+<!--  for each track -->
+ <a href=""><div class="vignette" style="background:url(04-title-artist-album.jpg);">
+  <p>01. <br /> 
+  <strong>That Super Long title that is really hard to display nicely</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
    <br style="clear: left;" />
   </div>
 
