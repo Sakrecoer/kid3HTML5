@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>%{title} by %{artist}</title>
+
+  <meta charset="utf-8" />
+  <meta name='robots' content='index'/>
+  <meta name="description" content="%{track} on %{album} by %{artist}, %{year} %{comment}">
+  <meta name="keywords" content="%{artist},%{title},%{year},%{genre},">
+  <style type="text/css">
+/*! sakrecoer sheet */
+html{
+ -webkit-transition:.5s background;
+ transition:.5s background;
+ font-family: Helvetica, Arial, sans-serif, sans;
+ font-size: 1em;
+ background: #777;
+}
+body, p{
+ margin:0;
+}
+h1,
+h2,
+h3,
+h4 {
+ font-weight:bold;
+ text-transform: uppercase;
+}
+
+b,
+strong {
+ font-weight:bold;
+}
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+ text-decoration: none;
+  -webkit-transition:.6s background;
+  transition:.6s background;
+}
+a,
+a:link,
+a:visited {
+ color: #fff;
+ -webkit-transition-property: hover;
+ -webkit-transition: color 0.15s ease-in-out;
+ -moz-transition: color 0.15s linear 0s; /* firefox 4 */
+ -o-transition-property: color; /* opera 10.5 */
+ -o-transition-duration: 0.15s;
+}
+a:hover {
+ color: rgba(0,0,0,0.9);
+}
+a:active {
+ color: #f00;
+}
+  </style>
+
+ </head>
+ <body>
+  <h1>%{artist} - %{album}</h1>
+
+  <div style="width: 100%;">
+
+<!--  for each track -->
+  <div style="float: left; width:350px;height:350px;background:#111;">%{track} %{title} - %{duration}</div>
+<!--  end for each track -->
+  <div style="float: left; width:350px;height:350px;background:#333;">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#444;">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#999;">%{track} %{title} - %{duration}</div>
+  <div style="float: left; width:350px;height:350px;background:#fff;">%{track} %{title} - %{duration}</div>
+   <br style="clear: left;" />
+  </div>
+
+ </body>
+</html>
+
+

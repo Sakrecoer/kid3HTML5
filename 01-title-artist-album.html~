@@ -62,7 +62,7 @@ a:active {
  width: 250px; padding: 10px;
  background-color: rgba(0,0,0,0.5);   
  text-align: center;
- border-radius: 125px 125px 0 0 ;
+ border-radius: 125px 125px 125px 125px ;
  opacity: .33;
  -webkit-transition-property: hover;
  -webkit-transition: opacity 0.7s ease-in-out;

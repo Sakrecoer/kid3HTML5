@@ -59,7 +59,7 @@ a:active {
 }
 #navigation {
  position: fixed; top:10px; left: 10px; z-index: 1000;
- width: 250px; height: 377px;padding: 10px;
+ width: 250px; height: 450px;padding: 10px;
  background-color: rgba(0,0,0,0.5);   
  text-align: center;
  border-radius: 125px ;
@@ -76,16 +76,16 @@ a:active {
  z-index: 10;
 }
 #lyrics {
- position: absolute; left:350px; top:10px; z-index: 1000;
-
- padding: 350px .75em .75em .75em;
+ position: absolute; left:350px; top:60px; z-index: 1000;
+ width: 600px;
+ padding: 0 .75em .75em .75em;
  margin-right:20%;
  background-color: rgba(0,0,0,0);   
  text-align: left;
  font-size: .85em;
- color: rgba(119,119,119,.5);
+ color: rgba(119,119,119,0);
  border-radius: 5px 5px 0 0 ;
- opacity: 0.1;
+ opacity: 1;
  -webkit-transition-property: hover;
  -webkit-transition: background-color 0.7s ease-in-out;
  -moz-transition: background-color 0.7s linear 0s; /* firefox 4 */
@@ -96,9 +96,19 @@ a:active {
  background-color: rgba(0,0,0,1); 
  opacity: .9;
  z-index: 10;
+ color: rgba(119,119,119,.9);
 }
 
-
+.title{
+ font-size:6em;
+ line-height:.8em;
+ letter-spacing:-.1em;
+ color:rgba(119,119,119,.3);
+  text-shadow: 1px 0px 14px rgba(119, 119, 119,.5),
+	    -1px 0px 14px rgba(119, 119, 119,.5),
+             0px -1px 14px rgba(119, 119, 119,.5),
+	     0px 1px 14px rgba(119, 119, 119,.5);
+}
 audio{
  position:fixed;
  right:0;
@@ -149,10 +159,12 @@ audio{
 /*show .ab*/
 #download:hover ~ #ab {
     display: block;
+
 }
 /*show .abc*/
 #trackdata:hover ~ #abc {
     display: block;
+
 }
 
 #download:hover ~ #a,
@@ -182,19 +194,18 @@ audio{
 
 /*  download  */
 #ab {
-    bottom:0; left:350px;
-    width: 600px; height: 75%;padding: 17px;
+    bottom:0; left:350px; top: 60px;
+    width: 600px; padding: 17px;
     background-color: rgba(0, 0, 0, .9);
     opacity: 1;
-    text-transform:uppercase;
     border-radius:4px;
     color: #777;
 }
 
 /*  trackdata  */
 #abc{
-    bottom:0; left:350px;
-    width: 600px; height:75%;padding: 17px;
+    bottom:0; left:350px; top: 60px;
+    width: 600px; padding: 17px;
     background-color: rgba(0, 0, 0, .9);
     opacity: 1;
     border-radius:4px;
@@ -202,9 +213,14 @@ audio{
 }
 #tracktime {
  position: fixed; right: 10px; bottom:-7px; 
- font-size: 12em; line-height:0.9em; letter-spacing: -0.2em; color: rgba(119,119,119,.1);
+ font-size: 12em; line-height:0.9em; letter-spacing: -0.2em; color: rgba(119,119,119,.3);
  font-family: Helvetica, Arial, Sans-serif, Sans;
  font-weight: bold;
+  text-shadow: 1px 0px 14px rgba(119, 119, 119,.5),
+	    -1px 0px 14px rgba(119, 119, 119,.5),
+             0px -1px 14px rgba(119, 119, 119,.5),
+	     0px 1px 14px rgba(119, 119, 119,.5);
+ z-index: 1000000;
 }
 
 html,
@@ -234,23 +250,23 @@ body{
 <br />
     
         
-  <a href="03-title-artist-album.html" title="Previous Track">Previous</a>
-  <a href="02-title-artist-album.html" title="Next Track"><img title="Next Track" />Next</a>
-<br />
-<br />  <a id="download" title="Download This Track!" href="%{file}">download</a>
-
+  <h1><a href="03-title-artist-album.html" title="Previous Track">&lArr;</a> | <a href="02-title-artist-album.html" title="Next Track"><img title="Next Track" />&rArr;</a></h1>
+  <a id="download" title="Download This Track!" href="%{file}">download</a>
   <p id="trackdata" title="trackdata" href="%{file}">Track Data</a>
   
   <div id="a"></div>
-  <div id="ab"><h1>To download:</h1><b>Right-Click and "Save link as"</b></div>
-  <div id="abc"><h1 itemprop="name">Acid In My Lounge</h1>Publishing Date: <time itemprop="datePublished" datetime="27 Apr 2013">27 Apr 2013</time><br />GENRE: <span itemprop="genre">Simio, Acid, Chillout, instrumental,</span>
+  <div id="ab"><h1 class="title">&nbsp;</h1><b>Right-Click and "Save link as"</b></div>
+  <div id="abc"><h1 class="title">&nbsp;</h1>YEAR: <time itemprop="datePublished" datetime="2013">2013</time>
+   <br />GENRE: <span itemprop="genre">Genre</span>
+   <br />DURATION: <span itemprop="duration">00:04:07</span>
+   <br />TRACK: 1 OF DISC: 2
 </div>
 
 
  </div>
 
 <div id="lyrics">
-<h1>Title</h1>
+<h1 class="title">Now Future</h1>
 <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</p>
 <p>Det är ett välkänt faktum att läsare distraheras av läsbar text på en sida när man skall studera layouten. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde, till skillnad från "Text här, Text här", och ger intryck av att vara läsbar text. Många publiseringprogram och webbutvecklare använder Lorem Ipsum som test-text, och en sökning efter "Lorem Ipsum" avslöjar många webbsidor under uteckling. Olika versioner har dykt upp under åren, ibland av olyckshändelse, ibland med flit (mer eller mindre humoristiska).</p>
 <p>I motsättning till vad många tror, är inte Lorem Ipsum slumvisa ord. Det har sina rötter i ett stycke klassiskt litteratur på latin från 45 år före år 0, och är alltså över 2000 år gammalt. Richard McClintock, en professor i latin på Hampden-Sydney College i Virginia, översatte ett av de mer ovanliga orden, consectetur, från ett stycke Lorem Ipsum och fann dess ursprung genom att studera användningen av dessa ord i klassisk litteratur. Lorem Ipsum kommer från styckena 1.10.32 och 1.10.33 av "de Finibus Bonorum et Malorum" (Ytterligheterna av ont och gott) av Cicero, skriven 45 före år 0. Boken är en avhandling i teorier om etik, och var väldigt populär under renäsanssen. Den inledande meningen i Lorem Ipsum, "Lorem Ipsum dolor sit amet...", kommer från stycke 1.10.32.</p>
