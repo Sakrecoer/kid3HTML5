@@ -303,6 +303,7 @@ function loadUrl(newLocation) {
 <span itemscope itemprop="audio" itemtype="http://schema.org/AudioObject">
  <audio preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
   <source src="01-title-artist-album.mp3" type="audio/mpeg" />
+  <source src="01-title-artist-album.ogg" type="audio/ogg" />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 <meta itemprop="name" content="%{title}" />
  </audio>
@@ -335,7 +336,7 @@ mu.addEventListener('ended', function() {
 mu.pause();
 mu.currentTime=0;
     
-loadUrl('02-title-artist-album.html'); return false;
+loadUrl('05-title-artist-album.html'); return false;
     
 
 // to capture IE10
@@ -369,7 +370,7 @@ mu.pause();
 <style type="text/css">
 html,
 body{
- background:url('01-title-artist-album.jpg') #0ff no-repeat center center fixed; 
+ background:url('04-title-artist-album.jpg') #0ff no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -105,10 +105,10 @@ a:active {
  line-height:.8em;
  letter-spacing:-.1em;
  color:rgba(119,119,119,0);
-  text-shadow: 1px 0px 27px rgba(119, 119, 119,.2),
-	    -1px 0px 27px rgba(119, 119, 119,.2),
-             0px -1px 27px rgba(119, 119, 119,.2),
-	     0px 1px 27px rgba(119, 119, 119,.2);
+  text-shadow: 1px 0px 7px rgba(119, 119, 119,.5),
+	    -1px 0px 7px rgba(119, 119, 119,.5),
+             0px -1px 7px rgba(119, 119, 119,.5),
+	     0px 1px 7px rgba(119, 119, 119,.5);
 }
 h1:hover {
   text-shadow: 1px 0px 0px rgba(119, 119, 119,.5),
@@ -261,7 +261,7 @@ function loadUrl(newLocation) {
 <br />
     
         
-  <h1><a href="05-title-artist-album.html" title="Previous Track">&lArr;</a> | <a href="02-title-artist-album.html" title="Next Track"><img title="Next Track" />&rArr;</a></h1>
+  <h1><a href="01-title-artist-album.html" title="Previous Track">&lArr;</a> | <a href="03-title-artist-album.html" title="Next Track"><img title="Next Track" />&rArr;</a></h1>
   <a id="download" title="Download This Track!" href="%{file}">download</a>
   <p id="trackdata" title="trackdata" href="%{file}">Track Data</p>
   <a href="index.html">Back to Index</a>
@@ -278,14 +278,13 @@ function loadUrl(newLocation) {
  </div>
 
 <div id="lyrics">
-<h1 class="title">Now Future</h1>
-<p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. </p>
+<h1 class="title">Interminable titel from hell that rocks and Hz's in sweet and fashionable way</h1>
+<p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</p>
 
 </div>
 <span itemscope itemprop="audio" itemtype="http://schema.org/AudioObject">
  <audio preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
   <source src="01-title-artist-album.mp3" type="audio/mpeg" />
-  <source src="01-title-artist-album.ogg" type="audio/ogg" />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 <meta itemprop="name" content="%{title}" />
  </audio>
@@ -318,7 +317,7 @@ mu.addEventListener('ended', function() {
 mu.pause();
 mu.currentTime=0;
     
-loadUrl('01-title-artist-album.html'); return false;
+loadUrl('03-title-artist-album.html'); return false;
     
 
 // to capture IE10
@@ -352,7 +351,7 @@ mu.pause();
 <style type="text/css">
 html,
 body{
- background:url('05-title-artist-album.jpg') #0ff no-repeat center center fixed; 
+ background:url('02-title-artist-album.jpg') #0ff no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
