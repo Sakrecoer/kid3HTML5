@@ -60,7 +60,7 @@ a:active {
 #navigation {
  position: fixed; top:10px; left: 10px; z-index: 1000;
  width: 250px; height: 450px;padding: 10px;
- background-color: rgba(215,215,215,0.5);   
+ background-color: rgba(119,119,119,0.5);   
  text-align: center;
  border-radius: 125px ;
  opacity: .33;
@@ -235,15 +235,6 @@ audio{
  z-index: 1000000;
 }
 
-
-html,
-body{
- background:url('01-title-artist-album.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 </style>
 
 </head>
@@ -337,7 +328,9 @@ mu.addEventListener('ended', function() {
 
 mu.pause();
 mu.currentTime=0;
+    
 loadUrl('02-title-artist-album.html'); return false;
+    
 
 // to capture IE10
 
@@ -367,6 +360,16 @@ mu.pause();
 
 </script>
 
+<style type="text/css">
+html,
+body{
+ background:url('01-title-artist-album.jpg') #0ff no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
 
 </body>
 </html>
