@@ -8,4 +8,4 @@ I still hesitate. Perhaps its easier to make kid3 spit jekyll posts to provide c
 2015/31/5
 At this point the render version works, tho it's missing the JSON-LD part. Assuming that kid3 can be aware of a context for the next/previous system to work, this could be a cool feature. Maybe create 3 preset styles? I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
 
-2015/06/01 gah playnext bug fixd
+2015/06/01 gah playnext bug fixd. Thoughts: rendering a folder buildable by jekyll is the only way to provide full freedom on the layout. Because this feature gives the desire to tweak the layout..
