@@ -60,7 +60,7 @@ a:active {
 #navigation {
  position: fixed; top:10px; left: 10px; z-index: 1000;
  width: 250px; height: 450px;padding: 10px;
- background-color: rgba(0,0,0,0.5);   
+ background-color: rgba(119,119,119,0.5);   
  text-align: center;
  border-radius: 125px ;
  opacity: .33;
@@ -71,14 +71,14 @@ a:active {
  -o-transition-duration: 0.7s;
 }
 #navigation:hover {
- background-color: rgba(0,0,0,0.5); 
+ background-color: rgba(119,119,119,0.5); 
  opacity: 1;
  z-index: 10;
 }
 #lyrics {
  position: absolute; left:350px; top:60px; z-index: 1000;
  width: 600px;
- padding: 0 .75em .75em .75em;
+ padding: 0 .75em 200px .75em;
  margin-right:20%;
  background-color: rgba(0,0,0,0);   
  text-align: left;
@@ -97,17 +97,29 @@ a:active {
  opacity: .9;
  z-index: 10;
  color: rgba(119,119,119,.9);
+
 }
 
 .title{
  font-size:6em;
  line-height:.8em;
  letter-spacing:-.1em;
- color:rgba(119,119,119,.3);
-  text-shadow: 1px 0px 14px rgba(119, 119, 119,.5),
-	    -1px 0px 14px rgba(119, 119, 119,.5),
-             0px -1px 14px rgba(119, 119, 119,.5),
-	     0px 1px 14px rgba(119, 119, 119,.5);
+ color:rgba(119,119,119,0);
+  text-shadow: 1px 0px 7px rgba(119, 119, 119,.5),
+	    -1px 0px 7px rgba(119, 119, 119,.5),
+             0px -1px 7px rgba(119, 119, 119,.5),
+	     0px 1px 7px rgba(119, 119, 119,.5);
+}
+h1:hover {
+  text-shadow: 1px 0px 0px rgba(119, 119, 119,.5),
+	    -1px 0px 0px rgba(119, 119, 119,.5),
+             0px -1px 0px rgba(119, 119, 119,.5),
+	     0px 1px 0px rgba(119, 119, 119,.5);
+ -webkit-transition-property: hover;
+ -webkit-transition: text-shadow 0.7s ease-in-out;
+ -moz-transition: text-shadow 0.7s linear 0s; /* firefox 4 */
+ -o-transition-property: text-shadow; /* opera 10.5 */
+ -o-transition-duration: 0.7s;
 }
 audio{
  position:fixed;
@@ -212,8 +224,8 @@ audio{
     color: #777;
 }
 #tracktime {
- position: fixed; right: 10px; bottom:-7px; 
- font-size: 12em; line-height:0.9em; letter-spacing: -0.2em; color: rgba(119,119,119,.3);
+ position: fixed; right: 10px; bottom:0px; 
+ font-size: 12em; line-height:0.9em; letter-spacing: -0.1em; color: rgba(119,119,119,0);
  font-family: Helvetica, Arial, Sans-serif, Sans;
  font-weight: bold;
   text-shadow: 1px 0px 14px rgba(119, 119, 119,.5),
@@ -223,15 +235,14 @@ audio{
  z-index: 1000000;
 }
 
-html,
-body{
- background: #fff no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 </style>
+<script type="text/javascript">
+
+function loadUrl(newLocation) {
+	window.location = newLocation;
+	return false;
+}
+</script>
 
 </head>
 
@@ -250,9 +261,10 @@ body{
 <br />
     
         
-  <h1><a href="02-title-artist-album.html" title="Previous Track">&lArr;</a> | <a href="04-title-artist-album.html" title="Next Track"><img title="Next Track" />&rArr;</a></h1>
+  <h1><a href="05-title-artist-album.html" title="Previous Track">&lArr;</a> | <a href="02-title-artist-album.html" title="Next Track"><img title="Next Track" />&rArr;</a></h1>
   <a id="download" title="Download This Track!" href="%{file}">download</a>
-  <p id="trackdata" title="trackdata" href="%{file}">Track Data</a>
+  <p id="trackdata" title="trackdata" href="%{file}">Track Data</p>
+  <a href="index.html">Back to Index</a>
   
   <div id="a"></div>
   <div id="ab"><h1 class="title">&nbsp;</h1><b>Right-Click and "Save link as"</b></div>
@@ -289,9 +301,9 @@ body{
 
 </div>
 <span itemscope itemprop="audio" itemtype="http://schema.org/AudioObject">
- <audio id="%{tracknumber}" preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
-  <source src="03-title-artist-album.mp3" type="audio/mpeg" />
-  <source src="03-title-artist-album.mp3" type="audio/ogg" />
+ <audio preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
+  <source src="01-title-artist-album.mp3" type="audio/mpeg" />
+  <source src="01-title-artist-album.ogg" type="audio/ogg" />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 <meta itemprop="name" content="%{title}" />
  </audio>
@@ -300,7 +312,7 @@ body{
 
 </span>
 </span>
- <span id="tracktime"></span>
+ <div id="tracktime"></div>
 
 <!-- stylemachine by Sakrecoer -snipthis if ya feel it - its the pary that runs the player ;) -->
 
@@ -308,29 +320,63 @@ body{
 
 
 var mu = document.getElementsByTagName("audio")[0];
+
 var pauseButton = document.getElementById("mu_pause");
+
 function muFade() {
+
 mu.classList.add("stopfade");
+
 }
+
 mu.addEventListener('ended', function() {
+
 // only functional if "loop" is removed
+
 mu.pause();
 mu.currentTime=0;
-loadUrl('./04-title-artist-album.html'); return false;
+    
+loadUrl('02-title-artist-album.html'); return false;
+    
+
+// to capture IE10
+
 muFade();
+
 });
+
 pauseButton.addEventListener("click", function() {
+
 mu.classList.toggle("stopfade");
+
 if (mu.paused) {
+
 mu.play();
+
 pauseButton.innerHTML = "Pause<br />Music";
+
 } else {
+
 mu.pause();
+
  pauseButton.innerHTML = "Resume<br />Music";
+
 }
+
 });
+
 </script>
 
+<style type="text/css">
+html,
+body{
+ background:url('04-title-artist-album.jpg') #0ff no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
 
 </body>
 </html>

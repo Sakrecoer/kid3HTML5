@@ -78,7 +78,7 @@ a:active {
 #lyrics {
  position: absolute; left:350px; top:60px; z-index: 1000;
  width: 600px;
- padding: 0 .75em .75em .75em;
+ padding: 0 .75em 200px .75em;
  margin-right:20%;
  background-color: rgba(0,0,0,0);   
  text-align: left;
@@ -236,6 +236,13 @@ audio{
 }
 
 </style>
+<script type="text/javascript">
+
+function loadUrl(newLocation) {
+	window.location = newLocation;
+	return false;
+}
+</script>
 
 </head>
 
@@ -294,7 +301,7 @@ audio{
 
 </div>
 <span itemscope itemprop="audio" itemtype="http://schema.org/AudioObject">
- <audio id="%{tracknumber}" preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
+ <audio preload="true" autoplay ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);" audio.mediaGroup="deluxe">
   <source src="01-title-artist-album.mp3" type="audio/mpeg" />
   <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
 <meta itemprop="name" content="%{title}" />
