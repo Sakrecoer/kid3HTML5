@@ -71,7 +71,7 @@ background-size: 370px;
  width:300px;
  height: 300px;
  margin:auto;
- border-radius: 7px;
+ border-radius: 2px;
  background: rgba(0,0,0,0);
  color:transparent;
  -webkit-transition-property: hover;
@@ -87,32 +87,49 @@ background-size: 370px;
 strong {
 font-size:2em;
 }
+.title{
+  text-shadow: 1px 0px 7px rgba(0, 0, 0,.5),
+	    -1px 0px 7px rgba(0, 0, 0,.5),
+             0px -1px 7px rgba(0, 0, 0,.5),
+	     0px 1px 7px rgba(0, 0, 0,.5);
+}
 #pagetitle {
+ z-index: 100;
  text-transform: none;
- position: fixed; bottom: 10px; left:10px;
+ position: fixed; bottom: 10px; left:0px;
  font-size:4em;
  letter-spacing:-.05em;
  line-height: .8em;
- color: rgba(0,0,0,.7);
- background:rgba(215,215,215,.7);
+ color:rgba(119,119,119,0);
+ background-color:rgba(215,215,215,.2);
  padding:7px 17px;
- border-radius: 7px;
- box-shadow:7px 0px 14px rgba(215,215,215,.7),
-	    -7px 0px 14px rgba(215,215,215,.7),
-             0px -7px 14px rgba(215,215,215,.7),
-	     0px 7px 14px rgba(0215,215,215,.7);
+ border-radius: 2px;
+}
+h1:hover{
+  text-shadow: 1px 0px 0px rgba(0, 0, 0,.5),
+	    -1px 0px 0px rgba(0, 0, 0,.5),
+             0px -1px 0px rgba(0, 0, 0,.5),
+	     0px 1px 0px rgba(0, 0, 0,.5);
+ -webkit-transition-property: hover;
+ -webkit-transition: text-shadow 0.3s ease-in-out;
+ -moz-transition: text-shadow 0.3s linear 0s; /* firefox 4 */
+ -o-transition-property: text-shadow; /* opera 10.5 */
+ -o-transition-duration: 0.3s;
 
 }
+
   </style>
 
  </head>
  <body>
-  <h1 id="pagetitle">Longtitle checked.
+
+
+  <h1 class="title" id="pagetitle">Longtitle checked.
    <br />Interminable albumtitel from hell.
   </h1>
 
-  <div style="width: 100%;" id="picker">
 
+  <div style="width: 100%;" id="picker">
 <!--  for each track -->
  <a href="01-title-artist-album.html"><div class="vignette" style="background:url(01-title-artist-album.jpg);background-size:cover;">
   <p>01. <br /> 
