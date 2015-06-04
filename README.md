@@ -1,26 +1,26 @@
 # kid3HTML5
 To export a deployable website jukebox served with static HTML5-files by simply tagging your mp3 correctly, using kid3. http://kid3.sourceforge.net/
 
-# Variables 
+## Variables 
 
-## Index File
+### Index File
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)
-### %{albumart} (hypothetic)
+#### %{albumart} (hypothetic)
 full filename, including extension 
-### %{filename}
+#### %{filename}
 full filename, excluding extension
 
-## Player File
+### Player File
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*
-### %{albumart} (hypothetic)
+#### %{albumart} (hypothetic)
 full filename, including extension 
-### %{filename}
+#### %{filename}
 full filename, excluding extension
-### %{extension}
+#### %{extension}
 extension of _audio_ files
-### %{previous_filename} (hypothetic)
+#### %{previous_filename} (hypothetic)
 if not first in list, full filename of previous HTML file
-### %{next_filename} (hypothetic)
+#### %{next_filename} (hypothetic)
 if not last, full filename of next HTML file.
 
 Procedure:
@@ -38,16 +38,16 @@ Kid3 creates an indexfile with a link to each track and for each audio-file:
 
 
 # Bugcrap Mindfood
-2015/31/5
+#### 2015/31/5
 I still hesitate. Perhaps its easier to make kid3 spit jekyll posts to provide custom layouts?
 
-2015/31/5
+#### 2015/31/5
 At this point the render version works, tho it's missing the JSON-LD part. Assuming that kid3 can be aware of a context for the next/previous system to work, this could be a cool feature. Maybe create 3 preset styles? I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
 
-2015/06/01 
+#### 2015/06/01 
 gah playnext bug fixd. Thoughts: rendering a folder buildable by jekyll is the only way to provide full freedom on the layout. Because this feature gives the desire to tweak the layout..
 
-2015/06/04
+#### 2015/06/04
 All files related to the same song should have same name, but ehm, different extensions. For this reason, this particular set-up cannot have more than one picture file per song. There is a browser audio compatibility issue between mp3 and ogg in HTML5. Should the user be instructed to create a copy of the playlist in the other format? It it'salot confusing too? 
 
 if only one audio file with %{filename} is found:

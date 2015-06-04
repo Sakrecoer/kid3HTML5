@@ -23,18 +23,32 @@ if not first in list, full filename of previous HTML file
 ### %{next_filename} (hypothetic)
 if not last, full filename of next HTML file.
 
-All files related to the same song should have same name, but ehm, different extensions. For this reason, this particular set-up cannot have more than one picture file per song. There is a browser audio compatibility issue between mp3 and ogg in HTML5. Should the user be instructed to create a copy of the playlist in the other format? It it'salot confusing too? 
-
 Procedure:
-User puts playlist in a folder.
+User puts audio files of the playlist in a folder.
 Tagg them correctly adds albumart, making sure everything is fine.
 Exports to HTML5.
 Kid3 create a folder in user location with %{artist}-%{album}
-for each:
- - id3 picture: export image file
- - 
+Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
+Kid3 creates an indexfile with a link to each track and for each audio-file:
+ - export first found image file embeded
+ - rename file to preset/user setting
+ - store %{filename}, look ahead and backward in line to generate play_next mechanism.
+ - create %{filename}.html 
 
-%{filename}.&{extension}
+
+
+# Bugcrap Mindfood
+2015/31/5
+I still hesitate. Perhaps its easier to make kid3 spit jekyll posts to provide custom layouts?
+
+2015/31/5
+At this point the render version works, tho it's missing the JSON-LD part. Assuming that kid3 can be aware of a context for the next/previous system to work, this could be a cool feature. Maybe create 3 preset styles? I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
+
+2015/06/01 
+gah playnext bug fixd. Thoughts: rendering a folder buildable by jekyll is the only way to provide full freedom on the layout. Because this feature gives the desire to tweak the layout..
+
+2015/06/04
+All files related to the same song should have same name, but ehm, different extensions. For this reason, this particular set-up cannot have more than one picture file per song. There is a browser audio compatibility issue between mp3 and ogg in HTML5. Should the user be instructed to create a copy of the playlist in the other format? It it'salot confusing too? 
 
 if only one audio file with %{filename} is found:
 > <audio>
@@ -50,14 +64,3 @@ if 2 audio files with the same %{filename} are found:
 >  <h1>Your browser isn't ready for so much hotness. Use the <a href="%{filename}.%{extension}">OGG download-link</a> instead.</h1>.
 >
 > </audio>
-
-# Bugcrap Mindfood
-2015/31/5
-I still hesitate. Perhaps its easier to make kid3 spit jekyll posts to provide custom layouts?
-
-2015/31/5
-At this point the render version works, tho it's missing the JSON-LD part. Assuming that kid3 can be aware of a context for the next/previous system to work, this could be a cool feature. Maybe create 3 preset styles? I will present this, and see whats possible. Crossfingers. Worstcase scenario: i have jekyll music CMS module waiting to be filled by post created with kid3.... :)
-
-2015/06/01 gah playnext bug fixd. Thoughts: rendering a folder buildable by jekyll is the only way to provide full freedom on the layout. Because this feature gives the desire to tweak the layout..
-
-2015/06/01
