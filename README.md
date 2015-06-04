@@ -11,7 +11,7 @@ To export a deployable website jukebox served with static HTML5-files by simply 
 `%{filename}` filename, excluding extension
 
 ### Player File
-`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*`
+`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} %{lyrics} %{etc....*`
 
 `%{albumart}` (hypothetic), full filename 
 
