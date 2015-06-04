@@ -24,12 +24,12 @@ if not first in list, full filename of previous HTML file
 if not last, full filename of next HTML file.
 
 Procedure:
-User puts audio files of the playlist in a folder.
-Tagg them correctly adds albumart, making sure everything is fine.
-Exports to HTML5.
-Kid3 create a folder in user location with %{artist}-%{album}
-Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
-Kid3 creates an indexfile with a link to each track and for each audio-file:
+- User puts audio files of the playlist in a folder.
+- Tagg them correctly adds albumart, making sure everything is fine.
+- Exports to HTML5.
+- Kid3 create a folder in user location with %{artist}-%{album}
+- Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
+- Kid3 creates an indexfile with a link to each track and for each audio-file:
  - export first found image file embeded
  - rename file to preset/user setting
  - store %{filename}, look ahead and backward in line to generate play_next mechanism.
@@ -61,6 +61,6 @@ if 2 audio files with the same %{filename} are found:
 > <audio>
 >  <source src="%{filename}.%{extension}" type="%{codec}" />
 >  <source src="%{filename}.%{extension}" type="%{codec}" />
->  <h1>Your browser isn't ready for so much hotness. Use the <a href="%{filename}.%{extension}">OGG download-link</a> instead.</h1>.
+>  <h1>Your browser isn't ready for so much hotness. Use the <a href="%{filename}.%{extension}">OGG download-link</a>, use the <a href="%{filename}.%{extension}">MP3download-link</a> instead.</h1>.
 >
 > </audio>
