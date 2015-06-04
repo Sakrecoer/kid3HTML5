@@ -73,7 +73,11 @@
   <p>05. <br /> 
   <strong>whatever dream</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
 <!--  end for each track -->
-
+<!--  for each track -->
+ <a href="06-title-artist-album.html"><div class="vignette" style="background:url(06-title-artist-album.jpg);background-size:cover;">
+  <p>06. <br /> 
+  <strong>Baby Yeah</strong> <br />00:04:07<br />by <b>BanSchovis</b></p></div></a>
+<!--  end for each track -->
    <br style="clear: left;" />
   </div>
 

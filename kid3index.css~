@@ -54,13 +54,12 @@ height:370px;
 background:no-repeat; 
 background-size: 370px;
  background-color: rgba(0,0,0,0.2);
- box-shadow: 1px 0px 37px rgba(0, 0, 0,.1),
-	    -1px 0px 37px rgba(0, 0, 0,.1),
-             0px -1px 37px rgba(0, 0, 0,.1),
-	     0px 1px 37px rgba(0, 0, 0,.1);
 }
 #picker {
-
+ box-shadow: 1px 0px 27px rgba(0, 0, 0,.3),
+	    -1px 0px 27px rgba(0, 0, 0,.3),
+             0px -1px 27px rgba(0, 0, 0,.3),
+	     0px 1px 27px rgba(0, 0, 0,.3);
 }
 #picker p {
  position:relative;

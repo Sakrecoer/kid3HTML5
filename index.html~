@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>%{title} by %{artist}</title>
+
+  <meta charset="utf-8" />
+  <meta name='robots' content='index'/>
+  <meta name="description" content="%{track} on %{album} by %{artist}, %{year} %{comment}">
+  <meta name="keywords" content="%{artist},%{album},%{title},%{year},%{genre},">
+  <link rel="stylesheet" type="text/css" href="kid3index.css" />
+ </head>
+ <body>
+
+  <h1 class="title" id="pagetitle">%{artist}
+   <br />%{album}
+  </h1>
+
+  <div style="width: 100%;" id="picker">
+
+<!--  for each track -->
+ <a href="%{filename}.html"><div class="vignette" style="background:url(%{albumart});background-size:cover;">
+  <p>%{track}<br /> 
+  <strong>%{title}</strong> <br />%{duration}<br />by <b>%{artist}</b></p></div></a>
+<!--  end for each track -->
+
+   <br style="clear: left;" />
+  </div>
+ </body>
+</html>
+
+

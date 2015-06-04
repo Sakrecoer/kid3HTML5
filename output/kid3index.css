@@ -48,22 +48,27 @@ a:active {
  color: #f00;
 }
 .vignette {
-padding:17px;
 float: left; 
 width:370px;
 height:370px;
-background: no-repeat; 
+background:no-repeat; 
 background-size: 370px;
+ background-color: rgba(0,0,0,0.2);
+ box-shadow: 1px 0px 37px rgba(0, 0, 0,.1),
+	    -1px 0px 37px rgba(0, 0, 0,.1),
+             0px -1px 37px rgba(0, 0, 0,.1),
+	     0px 1px 37px rgba(0, 0, 0,.1);
+}
+#picker {
 
 }
 #picker p {
  position:relative;
- padding: 7px;
- width:300px;
- height: 300px;
- margin:auto;
+ width:336px;
+ height: 336px;
+ padding: 17px;
  border-radius: 2px;
- background: rgba(0,0,0,0);
+ background: rgba(0,0,0,0.2);
  color:transparent;
  -webkit-transition-property: hover;
  -webkit-transition: background 0.15s ease-in-out;
@@ -87,13 +92,17 @@ font-size:2em;
 #pagetitle {
  z-index: 100;
  text-transform: none;
- position: fixed; bottom: 10px; left:0px;
+ position: fixed; bottom: 10px; left:17px;
  font-size:4em;
  letter-spacing:-.05em;
- line-height: .8em;
+ line-height: .95em;
  color:rgba(119,119,119,0);
- background-color:rgba(215,215,215,.2);
- padding:7px 17px;
+ background-color:transparent;
+ box-shadow: 1px 0px 27px rgba(0, 0, 0,.1),
+	    -1px 0px 27px rgba(0, 0, 0,.1),
+             0px -1px 27px rgba(0, 0, 0,.1),
+	     0px 1px 27px rgba(0, 0, 0,.1);
+ padding:7px;
  border-radius: 2px;
 }
 h1:hover{
