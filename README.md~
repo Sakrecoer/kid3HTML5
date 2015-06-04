@@ -14,9 +14,9 @@ full filename, excluding extension
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*
 ###### %{albumart} (hypothetic)
 full filename, including extension 
-#### %{filename}
+###### %{filename}
 full filename, excluding extension
-#### %{extension}
+###### %{extension}
 extension of _audio_ files
 ###### %{previous_filename} (hypothetic)
 if not first in list, full filename of previous HTML file
@@ -31,12 +31,9 @@ Procedure:
 - Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
 - Kid3 creates an indexfile with a link to each track
 - For each audio-file:
- - export first found image file embeded
- - rename file to preset/user setting
- - store this %{filename}, look ahead and backward in line to generate play_previous/next mechanism.
+ - store %{filename}, look ahead and backward in line to generate play_previous/next mechanism.
+ - export first found image embeded in tags, rename it to %{filename}.jpg/png store that name to %{albumart}
  - create %{filename}.html 
-
-
 
 # Bugcrap Mindfood
 #### 2015/31/5
