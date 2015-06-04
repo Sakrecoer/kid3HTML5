@@ -62,6 +62,6 @@ if 2 audio files with the same %{filename} are found:
  <audio>
   <source src="%{filename}.%{extension}" type="%{codec}" />
   <source src="%{filename}.%{extension}" type="%{codec}" />
-  <h1>Your browser isn't ready for so much hotness. Use the <a href="%{filename}.%{extension}">OGG download-link</a>, use the <a href="%{filename}.%{extension}">MP3download-link</a> instead.</h1>.
+  <h1>Your browser isn't ready for so much hotness. Use the <a href="%{filename}.%{extension}">%{codec} download-link</a> or the <a href="%{filename}.%{extension}">%{codec} download-link</a> instead.</h1>.
  </audio>
 ```
