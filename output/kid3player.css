@@ -221,3 +221,7 @@ audio{
 	     0px 1px 14px rgba(119, 119, 119,.5);
  z-index: 1000000;
 }
+.arrow {
+ font-size: 2em;
+ line-height: .9em;
+}

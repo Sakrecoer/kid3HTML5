@@ -24,7 +24,7 @@
 <br />
     
         
-  <h1><a href="01-title-artist-album.html" title="Previous Track" class="arrow">&#8676;</a> <a href="03-title-artist-album.html" title="Next Track" class="arrow">&#8677;</a></h1>
+  <h1><a href="01-title-artist-album.html" title="Previous Track" class="arrow">&#8676;</a> | <a href="03-title-artist-album.html" title="Next Track">&#8677;</a></h1>
   <a id="download" title="Download This Track!" href="%{file}">download</a>
   <p id="trackdata" title="trackdata" href="%{file}">Track Data</p>
   <a href="index.html">Back to Index</a>

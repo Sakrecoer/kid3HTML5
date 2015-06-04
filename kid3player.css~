@@ -223,5 +223,5 @@ audio{
 }
 .arrow {
  font-size: 2em;
- line-height: .9em;
+ line-height: .9;
 }
