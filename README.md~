@@ -4,23 +4,23 @@ To export a deployable website jukebox served with static HTML5-files by simply 
 ## Variables 
 
 ### Index File
-`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)`
-`%{albumart}` (hypothetic)
+%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)
+###### %{albumart} (hypothetic)
 full filename, including extension 
-`%{filename}`
+###### %{filename}
 full filename, excluding extension
 
 ### Player File
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*
-`%{albumart}` (hypothetic)
+###### %{albumart} (hypothetic)
 full filename, including extension 
-`%{filename}`
+###### %{filename}
 full filename, excluding extension
-`%{extension}`
+###### %{extension}
 extension of _audio_ files
-`%{previous_filename}` (hypothetic)
+###### %{previous_filename} (hypothetic)
 if not first in list, full filename of previous HTML file
-`%{next_filename}` (hypothetic)
+###### %{next_filename} (hypothetic)
 if not last, full filename of next HTML file.
 
 Procedure:
