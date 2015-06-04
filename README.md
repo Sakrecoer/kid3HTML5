@@ -34,6 +34,8 @@ Procedure:
  - store %{filename} of audiofile, look ahead and backward in line to generate play_previous/next mechanism.
  - export first found image embeded in tags to folder %{artist}-%{album}, store its filename to %{albumart}
  - create %{filename}.html 
+ - copy audio file to %{artist}-%{album} folder
+ - wish me Santa: convert to complementing audio format.
 
 # Bugcrap Mindfood
 #### 2015/31/5
