@@ -35,9 +35,9 @@
 
 
 
-   <!-- Tags detected -->
-   <p>%{%tagname}: <b>%{tagvalue}</b></p>
-   <!-- End Print -->
+   <!-- Print all detected Tags and values -->
+   
+   <!-- End PRint -->
 
 
 </div>
