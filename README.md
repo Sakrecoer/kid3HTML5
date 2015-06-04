@@ -29,13 +29,12 @@ Procedure:
 - Exports to HTML5.
 - Kid3 create a folder in user location with %{artist}-%{album}
 - Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
-- Kid3 creates an indexfile with a link to each track and for each audio-file:
+- Kid3 creates an indexfile with a link to each track
+- For each audio-file:
  - export first found image file embeded
  - rename file to preset/user setting
- - store %{filename}, look ahead and backward in line to generate play_next mechanism.
+ - store this %{filename}, look ahead and backward in line to generate play_previous/next mechanism.
  - create %{filename}.html 
-
-
 
 # Bugcrap Mindfood
 #### 2015/31/5
