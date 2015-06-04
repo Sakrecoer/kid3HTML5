@@ -5,23 +5,23 @@ To export a deployable website jukebox served with static HTML5-files by simply 
 
 ### Index File
 `%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)`
-`%{albumart}` (hypothetic)
-full filename, including extension 
-`%{filename}`
-full filename, excluding extension
+
+`%{albumart}` (hypothetic) full filename. 
+
+`%{filename}` filename, excluding extension
 
 ### Player File
-%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*
-`%{albumart}` (hypothetic)
-full filename, including extension 
-`%{filename}`
-full filename, excluding extension
-`%{extension}`
-extension of _audio_ files
-`%{previous_filename}` (hypothetic)
-if not first in list, full filename of previous HTML file
-`%{next_filename}` (hypothetic)
-if not last, full filename of next HTML file.
+`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*`
+
+`%{albumart}` (hypothetic), full filename 
+
+`%{filename}` filename, excluding extension
+
+`%{extension}` extension of _audio_ files
+
+`%{previous_filename}` (hypothetic), if not first in list, full filename of previous HTML file
+
+`%{next_filename}` (hypothetic) if not last, full filename of next HTML file.
 
 Procedure:
 - User puts audio files of the playlist in a folder.
