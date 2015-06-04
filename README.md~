@@ -31,8 +31,8 @@ Procedure:
 - Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
 - Kid3 creates an indexfile with a link to each track
 - For each audio-file:
- - store %{filename}, look ahead and backward in line to generate play_previous/next mechanism.
- - export first found image embeded in tags, rename it to %{filename}.jpg/png store that name to %{albumart}
+ - store %{filename} of audiofile, look ahead and backward in line to generate play_previous/next mechanism.
+ - export first found image embeded in tags to folder %{artist}-%{album}, store its filename to %{albumart}
  - create %{filename}.html 
 
 # Bugcrap Mindfood

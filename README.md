@@ -31,8 +31,8 @@ Procedure:
 - Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
 - Kid3 creates an indexfile with a link to each track
 - For each audio-file:
- - store %{filename}, look ahead and backward in line to generate play_previous/next mechanism.
- - export first found image embeded in tags, rename it to %{filename}.jpg/png store that name to %{albumart}
+ - store %{filename} of audiofile, look ahead and backward in line to generate play_previous/next mechanism.
+ - export first found image embeded in tags to folder %{artist}-%{album}, store its filename to %{albumart}
  - create %{filename}.html 
 
 # Bugcrap Mindfood
@@ -46,7 +46,7 @@ At this point the render version works, tho it's missing the JSON-LD part. Assum
 gah playnext bug fixd. Thoughts: rendering a folder buildable by jekyll is the only way to provide full freedom on the layout. Because this feature gives the desire to tweak the layout..
 
 #### 2015/06/04
-All files related to the same song should have same name, but ehm, different extensions. For this reason, this particular set-up cannot have more than one picture file per song. There is a browser audio compatibility issue between mp3 and ogg in HTML5. Can we sniff for audiofile side-cars? Should the user be instructed to create a copy of the playlist in the other format afterwards? It it'salot confusing too? 
+All files related to the same song should have same name, but ehm, different extensions. For this reason, this particular set-up cannot have more than one picture file per song. There is a browser audio compatibility issue between mp3 and ogg in HTML5. Can we sniff for audiofile side-cars? Should the user be instructed to create a copy of the playlist in the other format afterwards? It it'salot confuzing too? 
 
 if only one audio file with %{filename} is found:
 ```
