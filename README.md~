@@ -27,14 +27,15 @@ Procedure:
 - User puts audio files of the playlist in a folder.
 - Tagg them correctly adds albumart, making sure everything is fine.
 - Exports to HTML5.
-- Kid3 create a folder in user location with %{artist}-%{album}
-- Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
+- Kid3 create a folder in user location with `%{artist}-%{album}`
+- Copies kid3index.css and kid3player.css to folder `%{artist}-%{album}`
 - Kid3 creates an indexfile with a link to each track
 - For each audio-file:
- - store %{filename} of audiofile, look ahead and backward in line to generate play_previous/next mechanism.
- - export first found image embeded in tags to folder %{artist}-%{album}, store its filename to %{albumart}
- - create %{filename}.html 
- - copy audio file to %{artist}-%{album} folder
+ - rename audiofiles to http friendly names
+ - copy audio file to `%{artist}-%{album}` folder
+ - store `%{filename}` of audiofile, look ahead and backward in line to generate play_previous/next mechanism.
+ - export first found image embeded in tags to the `%{artist}-%{album}`folder, store its filename to `%{albumart}`
+ - create `%{filename}.html` 
  - wish me Santa: convert to complementing audio format.
 
 # Bugcrap Mindfood
