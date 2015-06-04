@@ -4,14 +4,14 @@ To export a deployable website jukebox served with static HTML5-files by simply 
 ## Variables 
 
 ### Index File
-`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)`
+`%{artist}` `%{title}` `%{track}` `%{album}` `%{comment}` `%{year}` `%{genre}` `%{duration}` `%{lyrics}` `%{etc....*`
 
 `%{albumart}` (hypothetic) full filename. 
 
 `%{filename}` filename, excluding extension
 
 ### Player File
-`%{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} %{lyrics} %{etc....*`
+`%{artist}` `%{title}` `%{track}` `%{album}` `%{comment}` `%{year}` `%{genre}` `%{duration}` `%{lyrics}` `%{etc....*`
 
 `%{albumart}` (hypothetic), full filename 
 
