@@ -5,31 +5,31 @@ To export a deployable website jukebox served with static HTML5-files by simply 
 
 ### Index File
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD)
-#### %{albumart} (hypothetic)
+###### %{albumart} (hypothetic)
 full filename, including extension 
-#### %{filename}
+###### %{filename}
 full filename, excluding extension
 
 ### Player File
 %{artist} %{title} %{track} %{album} %{comment} %{year} %{genre} %{duration} (%{lyrics} JSON-LD) ....*
-#### %{albumart} (hypothetic)
+###### %{albumart} (hypothetic)
 full filename, including extension 
 #### %{filename}
 full filename, excluding extension
 #### %{extension}
 extension of _audio_ files
-#### %{previous_filename} (hypothetic)
+###### %{previous_filename} (hypothetic)
 if not first in list, full filename of previous HTML file
-#### %{next_filename} (hypothetic)
+###### %{next_filename} (hypothetic)
 if not last, full filename of next HTML file.
 
 Procedure:
-User puts audio files of the playlist in a folder.
-Tagg them correctly adds albumart, making sure everything is fine.
-Exports to HTML5.
-Kid3 create a folder in user location with %{artist}-%{album}
-Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
-Kid3 creates an indexfile with a link to each track and for each audio-file:
+- User puts audio files of the playlist in a folder.
+- Tagg them correctly adds albumart, making sure everything is fine.
+- Exports to HTML5.
+- Kid3 create a folder in user location with %{artist}-%{album}
+- Copies kid3index.css and kid3player.css to folder %{artist}-%{album}
+- Kid3 creates an indexfile with a link to each track and for each audio-file:
  - export first found image file embeded
  - rename file to preset/user setting
  - store %{filename}, look ahead and backward in line to generate play_next mechanism.
