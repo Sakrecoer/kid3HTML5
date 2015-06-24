@@ -47,7 +47,7 @@ a:active {
 }
 #navigation {
  position: fixed; top:10px; left: 10px; z-index: 1000;
- width: 125px; height: 250px;padding: 10px;
+ width: 175px; height: 300px;padding: 10px;
  background-color: rgba(119,119,119,0.5);   
  text-align: center;
  border-radius: 125px ;
@@ -136,8 +136,8 @@ audio{
  bottom: 30%;
  right: 40%; */
  display:block;
- width:125px;
- height: 125px;
+ width:175px;
+ height: 175px;
  border-radius: 50%;
  border:none;
  background:rgba(119,119,119,1);
