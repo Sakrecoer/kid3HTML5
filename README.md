@@ -2,7 +2,7 @@
 
 ### Download the master-zip file ( https://github.com/Sakrecoer/kid3HTML5/archive/master.zip ) and extract the exporter_blurStyle folder.
 ### In Kid3 (http://kid3.sourceforge.net/), go to Settings/User Actions and add a new user action with the following options:
-### Output=checked, Name=ExportHTML5 BlurStyle, Command=@qml /path/to/ExportHtml.qml
+### Output=checked, Name=ExportHTML5 BlurStyle, Command=@qml /path/to/exporter_blurStyle/ExportHtml.qml
 
 ### You can then export using "ExportHTML5 BlurStyle" in the file list context menu.
 
