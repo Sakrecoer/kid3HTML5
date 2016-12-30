@@ -209,6 +209,11 @@ Kid3Script {
       }
       var hasTags = Object.keys(tags).length > 0
       if (hasTags) {
+        // var frames = app.getAllFrames(tagv2)
+        // for (var key in frames) {
+        //  console.log(key, frames[key])
+      //  }
+        tags["track"] = app.getAllFrames(tagv2)["Track Number"]
         tags["trackdata"] = renderTrackData(tags)
         tags["filename"] = fileName
         tags["basename"] = baseName
@@ -235,6 +240,12 @@ Kid3Script {
         tags["previous_basename"] = previousBaseName ? previousBaseName
                                                      : baseName
         tags["next_basename"] = nextBaseName
+        if (!hasNextFile) {
+          // Loop to first track
+          app.firstFile()
+          app.nextFile()
+          tags["next_basename"] = splitFileName(app.selectionInfo.fileName)[0]
+        }
         if (!index) {
           index += replaceTemplateParameters(indexTop, tags)
         }
